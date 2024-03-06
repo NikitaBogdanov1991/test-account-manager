@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer-by-phone-number-form</title>
+</head>
+<body>
+    <h1>This is the translation page</h1>
+    <br>
+    <form action="/transfer" method="post">
+        <input type="hidden" name="fromAccountId" th:value="${accountFrom.id}">
+        <label for="toPhoneNumber">Recipient Phone Number:</label>
+        <input type="text" id="toPhoneNumber" name="toPhoneNumber" required><br><br>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" min="0" step="0.01" required><br><br>
+        <button type="submit">Transfer</button>
+    </form>
+    <br>
+    <a href="/choose-a-role-form">Return to start page</a>
+</body>
+</html>

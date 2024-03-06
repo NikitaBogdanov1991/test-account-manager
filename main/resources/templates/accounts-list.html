@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Accounts list</title>
+</head>
+<body>
+    <h1>This is list of all accounts:</h1>
+    <br>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Telephone Number</th>
+            <th>Date Of Birth</th>
+            <th>Login</th>
+            <th>Password</th>
+            <th>Amount</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr th:each="account: ${accounts}">
+            <td th:text = "${account.name}"/>
+            <td th:text = "${account.surname}"/>
+            <td th:text = "${account.email}"/>
+            <td th:text = "${account.telephoneNumber}"/>
+            <td th:text = "${account.dateOfBirth}"/>
+            <td th:text = "${account.login}"/>
+            <td th:text = "${account.password}"/>
+            <td th:text = "${account.amount}"/>
+            <td><a th:href="@{'/edit-manager-form/' + ${account.id}}"/>Edit</td>
+            <td><a th:href="@{'/delete/' + ${account.id}}"/>Delete</td>
+        </tr>
+    </table>
+    <br>
+    <a href="/create-form">Add account</a>
+    <br><br>
+    <a href="/search-by-phone-number-form">Search by phone number page</a>
+    <br><br>
+    <a href="/search-by-email-form">Search by email page</a>
+    <br><br>
+    <a href="/choose-a-role-form">Return to start page</a>
+</body>
+</html>

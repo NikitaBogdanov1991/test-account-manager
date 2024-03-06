@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client form</title>
+</head>
+<body>
+    <h1>This is client page</h1>
+    <br>
+    <h1>Welcome, <span th:text="${loginToAccount.name}"></span>!</h1>
+    <br>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Telephone Number</th>
+            <th>Date Of Birth</th>
+            <th>Login</th>
+            <th>Password</th>
+            <th>Amount</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><span th:text="${loginToAccount.name}"></span></td>
+            <td><span th:text="${loginToAccount.surname}"></span></td>
+            <td><span th:text="${loginToAccount.email}"></span></td>
+            <td><span th:text="${loginToAccount.telephoneNumber}"></span></td>
+            <td><span th:text="${loginToAccount.dateOfBirth}"></span></td>
+            <td><span th:text="${loginToAccount.login}"></span></td>
+            <td><span th:text="${loginToAccount.password}"></span></td>
+            <td><span th:text="${loginToAccount.amount}"></span></td>
+            <td><a th:href="@{'/edit-client-form/' + ${loginToAccount.id}}"/>Edit</td>
+            <td><a th:href="@{'/transfer-by-phone-number-form/' + ${loginToAccount.id}}"/>Transfer by phone number</td>
+        </tr>
+    </table>
+    <br><br>
+    <a href="/choose-a-role-form">Return to start page</a>
+</body>
+</html>

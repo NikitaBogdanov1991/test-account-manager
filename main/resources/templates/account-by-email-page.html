@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account by email page</title>
+</head>
+<body>
+    <h1>This is info page by email</h1>
+    <br>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Telephone Number</th>
+            <th>Date Of Birth</th>
+            <th>Login</th>
+            <th>Password</th>
+            <th>Amount</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><span th:text="${accountByEmail.name}"></span></td>
+            <td><span th:text="${accountByEmail.surname}"></span></td>
+            <td><span th:text="${accountByEmail.email}"></span></td>
+            <td><span th:text="${accountByEmail.telephoneNumber}"></span></td>
+            <td><span th:text="${accountByEmail.dateOfBirth}"></span></td>
+            <td><span th:text="${accountByEmail.login}"></span></td>
+            <td><span th:text="${accountByEmail.password}"></span></td>
+            <td><span th:text="${accountByEmail.amount}"></span></td>
+            <td><a th:href="@{'/edit-manager-form/' + ${accountByEmail.id}}"/>Edit</td>
+            <td><a th:href="@{'/delete/' + ${accountByEmail.id}}"/>Delete</td>
+        </tr>
+    </table>
+    <br>
+    <a href="/choose-a-role-form">Return to start page</a>
+</body>
+</html>

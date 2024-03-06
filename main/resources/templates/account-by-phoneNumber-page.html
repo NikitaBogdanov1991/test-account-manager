@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account by phone number page</title>
+</head>
+<body>
+    <h1>This is info page by phone number</h1>
+    <br>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Telephone Number</th>
+            <th>Date Of Birth</th>
+            <th>Login</th>
+            <th>Password</th>
+            <th>Amount</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><span th:text="${accountByPhoneNumber.name}"></span></td>
+            <td><span th:text="${accountByPhoneNumber.surname}"></span></td>
+            <td><span th:text="${accountByPhoneNumber.email}"></span></td>
+            <td><span th:text="${accountByPhoneNumber.telephoneNumber}"></span></td>
+            <td><span th:text="${accountByPhoneNumber.dateOfBirth}"></span></td>
+            <td><span th:text="${accountByPhoneNumber.login}"></span></td>
+            <td><span th:text="${accountByPhoneNumber.password}"></span></td>
+            <td><span th:text="${accountByPhoneNumber.amount}"></span></td>
+            <td><a th:href="@{'/edit-manager-form/' + ${accountByPhoneNumber.id}}"/>Edit</td>
+            <td><a th:href="@{'/delete/' + ${accountByPhoneNumber.id}}"/>Delete</td>
+        </tr>
+    </table>
+    <br>
+    <a href="/choose-a-role-form">Return to start page</a>
+</body>
+</html>

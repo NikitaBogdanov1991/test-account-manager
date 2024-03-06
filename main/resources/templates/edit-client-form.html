@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit client form</title>
+</head>
+<body>
+    <form method="post" action="/updateClient">
+        <input type="hidden"
+               name="id"
+               th:value="${account.id}"
+        />
+        <br>
+        <input type="hidden"
+               name="name"
+               th:value="${account.name}"
+        />
+        <br>
+        <input type="hidden"
+               name="surname"
+               th:value="${account.surname}"
+        />
+        <br>
+        <input type="text"
+               name="email"
+               placeholder="Account email"
+               th:value="${account.email}"
+        />
+        <br>
+        <input type="text"
+               name="telephoneNumber"
+               placeholder="Account telephone number"
+               th:value="${account.telephoneNumber}"
+        />
+        <br>
+        <input type="hidden"
+               name="dateOfBirth"
+               th:value="${account.dateOfBirth}"
+        />
+        <br>
+        <input type="hidden"
+               name="login"
+               th:value="${account.login}"
+        />
+        <br>
+        <input type="hidden"
+               name="password"
+               th:value="${account.password}"
+        />
+        <br>
+        <input type="hidden"
+               name="amount"
+               th:value="${account.amount}"
+        />
+        <br>
+        <input type="submit"/>
+    </form>
+    <br>
+    <a href="/choose-a-role-form">Return to start page</a>
+</body>
+</html>
